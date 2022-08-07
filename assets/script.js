@@ -18,32 +18,57 @@
 
 // Defined Variables
 // // array of time between 9am-5pm
-let timeArray = ['9:00 AM', '10:00 AM', '11:00 AM', '12:00 PM', '1:00 PM', '2:00 PM', '3:00 PM', '4:00 PM', '5:00 PM'];
+let timeArray = [
+  "9:00 AM",
+  "10:00 AM",
+  "11:00 AM",
+  "12:00 PM",
+  "1:00 PM",
+  "2:00 PM",
+  "3:00 PM",
+  "4:00 PM",
+  "5:00 PM",
+];
 let table = document.querySelector("#table");
-let tableRow = document.createElement("<tr>");
-let tableCell = document.createElement("<td>");
 
-let hour = tableCell.setAttribute("class", "hour"); 
+// // define a function then execute the function after its definition
+function timeBlock() {
+  let j = 9;
+  for (i = 0; i < timeArray.length; i++) {
+    let tableRow = document.createElement("tr");
+    let tableCell1 = document.createElement("td");
 
-let textArea = document.createElement("<textarea>");
-let description = textArea.setAttribute("class", "description");
-let descriptionCell = tableCell.appendChild(description);
+    let hourCell = document.createElement("p");
+    hourCell.setAttribute("class", "hour");
 
-let btn = document.createElement("<button>");
-let saveBtn = btn.setAttribute("class", "saveBtn");
-let saveBtnCell = tabelCell.appendChild(saveBtn);
+    let tableCell2 = document.createElement("td");
+    tableCell2.setAttribute("class", "box");
+    let textArea = document.createElement("textarea");
+    textArea.setAttribute("class", "description");
+    textArea.setAttribute("id", j);
+    j++;
+    tableCell2.appendChild(textArea);
 
-// // define a function then execute the function after its definition 
-function timeBlock(){
-    for( i = 0 ; i < timeArray.length; i++){
-        tableRow.setAttribute("class", "time-block");
-        hourCell.textContent = timeArray[i]
-        tableRow.append(hourCell, descriptionCell, saveBtnCell);
-        table.append(tableRow);
-    }
+    let tableCell3 = document.createElement("td");
+    let btn = document.createElement("button");
+    btn.setAttribute("class", "saveBtn");
+    btn.textContent = "save";
+    btn.addEventListener("click", saveBtn);
+    tableCell3.appendChild(btn);
+
+    tableRow.setAttribute("class", "time-block");
+
+    hourCell.textContent = timeArray[i];
+    tableCell1.append(hourCell);
+
+    tableRow.append(tableCell1, tableCell2, tableCell3);
+    table.append(tableRow);
+    // console.log(tableRow);
+  };
+//   console.log(timeArray);
 }
 timeBlock();
 // For every hour, display a row that contains time, input field, and save button from hours 9am-5pm
-
-
-
+function saveBtn(){
+  console.log(event.target);
+}
