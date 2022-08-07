@@ -69,6 +69,9 @@ function timeBlock() {
 }
 timeBlock();
 // For every hour, display a row that contains time, input field, and save button from hours 9am-5pm
-function saveBtn(){
+function saveBtn(event){
   console.log(event.target);
+//   let input = event.target.closest("textarea").value;
+//   let hour =  event.target.closest("textarea").getAttribute("id")
+  console.log(input, hour);
 }
