@@ -5,7 +5,7 @@ Deployed Link:
 [https://sprantis.github.io/work-day-scheduler/]
 
 Description:
-I have refactored a daily planner application to be efficient and productive.The planner asks for user’s input for event fields and has the ability to be saved for the current day. Once a time period has expired the color of the field will change to gray. Future events and time periods remain green. Present events and time periods are red. 
+I have refactored a work day scheduler application to allow users to write and save notes via local storage. The planner also keeps track of the current date and time. Time blocks are color-coded for past, present, and future work hours relative to the current time.
 
 Screenshot:
 ![Work-day-Scheduler Screenshot](./assets/images/_sarah-prantis_module-5_work-day-scheduler_index.html.png)

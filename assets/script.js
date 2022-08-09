@@ -33,18 +33,18 @@ function timeBlock() {
     let tableCell3 = document.createElement("td");
     let btn = document.createElement("div");
 
-    tableCell1.setAttribute("class", "tableCell1 col-2");
-    hourCell.setAttribute("class", "hour");
+    tableCell1.setAttribute("class", "col-1 p-0");
+    hourCell.setAttribute("class", "hour d-flex align-items-center");
 
-    tableCell2.setAttribute("class", "col-9 box tableCell2");
-    textArea.setAttribute("class", "description");
+    tableCell2.setAttribute("class", "col-10 box p-0 border-0");
+    textArea.setAttribute("class", "description ");
     textArea.setAttribute("id", j);
     j++;
     tableCell2.appendChild(textArea);
 
-    tableCell3.setAttribute("class", "tableCell3 col-1");
+    tableCell3.setAttribute("class", "p-0 border-0");
     btn.setAttribute("class", "saveBtn");
-    btn.textContent = "save";
+    btn.innerHTML = '<i class="fas fa-save"></i>';
     btn.addEventListener("click", saveBtn);
     tableCell3.appendChild(btn);
 
