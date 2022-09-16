@@ -1,5 +1,4 @@
-# work-day-scheduler
-## Work Day Scheduler
+# Work Day Scheduler
 
 Deployed Link:
 [https://sprantis.github.io/work-day-scheduler/]
